@@ -1,0 +1,20 @@
+# https://www.robotstxt.org/robotstxt.html
+
+# Abraham Events & Hospitality Management — Robots Configuration
+# Allow search engine crawling of the main page; block sensitive paths
+
+User-agent: *
+Allow: /
+Disallow: /.htaccess
+Disallow: /.git/
+Disallow: /.svn/
+Disallow: /.env
+Disallow: /errors/
+Disallow: /backup/
+Disallow: /tmp/
+Disallow: /logs/
+Disallow: /config/
+Disallow: /cgi-bin/
+
+# Sitemap (uncomment and update when deployed)
+# Sitemap: https://yourdomain.com/sitemap.xml
