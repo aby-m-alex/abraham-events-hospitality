@@ -1,0 +1,2333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Abraham Events & Hospitality Management | Luxury Planners in Kollam & Ernakulam</title>
+  <meta name="description" content="Abraham Events & Hospitality Management is Kollam & Ernakulam's premier luxury event planner. Specialized in backwater weddings, corporate summits, traditional Sadya, and premium resort bookings across Kerala.">
+  
+  <!-- Security Meta Tags (client-side fallback for .htaccess headers) -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' https://images.unsplash.com data:; connect-src 'self' https://wa.me; frame-ancestors 'none'; base-uri 'self'; form-action 'self' https://wa.me; upgrade-insecure-requests">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="X-Frame-Options" content="DENY">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  
+  <style>
+    /* CSS Variables & Luxury Design Tokens */
+    :root {
+      --bg-dark: #070a13;
+      --bg-navy-glow: #0e162b;
+      --gold: #c9a84c;
+      --gold-light: #dfc57a;
+      --gold-glow: rgba(201, 168, 76, 0.4);
+      --warm-white: #f5f0e8;
+      --soft-navy: #10172b;
+      --card-navy: #141d36;
+      --text-muted: #9ba1b4;
+      --transition-slow: 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+      --transition-normal: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      --transition-fast: 0.25s ease;
+      --container-width: 1200px;
+    }
+
+    /* Reset & Base Styles */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+      background-color: var(--bg-dark);
+      color: var(--warm-white);
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      overflow-x: hidden;
+      line-height: 1.6;
+      background: radial-gradient(circle at 50% 0%, var(--bg-navy-glow) 0%, var(--bg-dark) 80%);
+      background-attachment: fixed;
+    }
+
+    h1, h2, h3, h4, .brand-text {
+      font-family: 'Playfair Display', serif;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      transition: color var(--transition-fast);
+    }
+
+    /* Utility Classes */
+    .container {
+      width: 90%;
+      max-width: var(--container-width);
+      margin: 0 auto;
+      padding: 6rem 0;
+      position: relative;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 4rem;
+      position: relative;
+      z-index: 2;
+    }
+
+    .section-title h2 {
+      font-size: 2.8rem;
+      color: var(--warm-white);
+      margin-bottom: 0.5rem;
+    }
+
+    .section-title h2 span {
+      color: var(--gold);
+      font-style: italic;
+    }
+
+    .section-title::after {
+      content: '';
+      display: block;
+      width: 80px;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--gold) 50%, transparent);
+      margin: 1.2rem auto 0;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem 2.2rem;
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      border: 1px solid transparent;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all var(--transition-normal);
+      font-family: 'Inter', sans-serif;
+    }
+
+    .btn-gold {
+      background: linear-gradient(135deg, var(--gold-light) 0%, var(--gold) 100%);
+      color: #070a13;
+      box-shadow: 0 4px 15px rgba(201, 168, 76, 0.2);
+    }
+
+    .btn-gold:hover {
+      background: transparent;
+      color: var(--gold);
+      border-color: var(--gold);
+      box-shadow: 0 0 20px var(--gold-glow);
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      background: transparent;
+      border-color: var(--warm-white);
+      color: var(--warm-white);
+    }
+
+    .btn-outline:hover {
+      background: var(--warm-white);
+      color: #070a13;
+      transform: translateY(-2px);
+    }
+
+    /* Scroll Trigger Animation Base Classes */
+    .fade-in-up {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity var(--transition-slow), transform var(--transition-slow);
+    }
+
+    .fade-in-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Navigation Header */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      background: rgba(7, 10, 19, 0.75);
+      backdrop-filter: blur(15px);
+      -webkit-backdrop-filter: blur(15px);
+      border-bottom: 1px solid rgba(201, 168, 76, 0.1);
+      transition: all var(--transition-normal);
+      padding: 1.25rem 0;
+    }
+
+    header.scrolled {
+      padding: 0.85rem 0;
+      background: rgba(7, 10, 19, 0.92);
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+    }
+
+    .nav-container {
+      width: 90%;
+      max-width: var(--container-width);
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.9rem;
+    }
+
+    .logo-img {
+      height: 48px;
+      width: auto;
+      object-fit: contain;
+      transition: transform var(--transition-normal);
+    }
+
+    .brand:hover .logo-img {
+      transform: scale(1.05);
+    }
+
+    .brand-text {
+      font-size: 1.9rem;
+      color: var(--gold);
+      font-weight: 600;
+      letter-spacing: 2px;
+      background: linear-gradient(135deg, var(--gold-light) 0%, var(--gold) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .nav-menu {
+      display: flex;
+      gap: 2.2rem;
+      list-style: none;
+      align-items: center;
+    }
+
+    .nav-link {
+      font-size: 0.8rem;
+      font-weight: 500;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 0.5rem 0;
+      position: relative;
+      color: var(--text-muted);
+    }
+
+    .nav-link:hover, .nav-link.active {
+      color: var(--gold-light);
+    }
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background: linear-gradient(90deg, var(--gold-light), var(--gold));
+      transition: width var(--transition-normal);
+    }
+
+    .nav-link:hover::after, .nav-link.active::after {
+      width: 100%;
+    }
+
+    /* Mobile Hamburger Menu */
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 26px;
+      height: 18px;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      z-index: 1001;
+    }
+
+    .menu-toggle span {
+      width: 100%;
+      height: 2px;
+      background-color: var(--gold);
+      transition: all var(--transition-normal);
+      transform-origin: left center;
+    }
+
+    /* Hero Section */
+    .hero {
+      position: relative;
+      height: 100vh;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .hero-slideshow {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+    }
+
+    .hero-slide {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      opacity: 0;
+      transition: opacity 1.5s ease-in-out, transform 4.5s ease-in-out;
+      transform: scale(1.05);
+    }
+
+    .hero-slide.active {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    .hero-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to bottom, rgba(7, 10, 19, 0.85) 0%, rgba(7, 10, 19, 0.55) 50%, rgba(7, 10, 19, 0.9) 100%);
+      z-index: 2;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 3;
+      width: 90%;
+      max-width: 900px;
+      padding-top: 4rem;
+    }
+
+    .hero-content h1 {
+      font-size: 3.8rem;
+      color: var(--warm-white);
+      line-height: 1.25;
+      margin-bottom: 1.8rem;
+      text-shadow: 0 4px 25px rgba(0,0,0,0.6);
+    }
+
+    .hero-content h1 span {
+      display: block;
+      font-size: 1.35rem;
+      font-family: 'Inter', sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 5px;
+      color: var(--gold);
+      margin-bottom: 1.2rem;
+      font-weight: 500;
+    }
+
+    .hero-subtext {
+      font-size: 1.25rem;
+      font-weight: 300;
+      letter-spacing: 1.5px;
+      color: var(--text-muted);
+      margin-bottom: 3rem;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+      text-shadow: 0 2px 15px rgba(0,0,0,0.6);
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 1.5rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    /* Ambient Glow Behind Sections */
+    .section-glow {
+      position: absolute;
+      top: 15%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(201, 168, 76, 0.04) 0%, transparent 70%);
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    /* Services Section */
+    .services-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3.5rem;
+      margin-top: 1rem;
+      position: relative;
+      z-index: 2;
+    }
+
+    .service-card {
+      border-radius: 8px;
+      padding: 3.5rem 3rem;
+      position: relative;
+      transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+      border: 1px solid transparent;
+    }
+
+    /* Double Border Gradient Hack using padding-box and border-box background logic */
+    .service-card.events-card {
+      background: linear-gradient(var(--soft-navy), var(--soft-navy)) padding-box,
+                  linear-gradient(135deg, var(--gold) 0%, rgba(201, 168, 76, 0.1) 100%) border-box;
+    }
+    
+    .service-card.events-card:hover {
+      box-shadow: 0 15px 40px rgba(201, 168, 76, 0.08), inset 0 0 20px rgba(201, 168, 76, 0.03);
+      transform: translateY(-6px);
+    }
+
+    .service-card.hospitality-card {
+      background: linear-gradient(rgba(20, 29, 54, 0.5), rgba(20, 29, 54, 0.5)) padding-box,
+                  linear-gradient(135deg, var(--warm-white) 0%, rgba(245, 240, 232, 0.1) 100%) border-box;
+    }
+    
+    .service-card.hospitality-card:hover {
+      box-shadow: 0 15px 40px rgba(245, 240, 232, 0.05), inset 0 0 20px rgba(245, 240, 232, 0.02);
+      transform: translateY(-6px);
+    }
+
+    .service-header {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .service-icon-wrapper {
+      width: 64px;
+      height: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      border: 1px solid transparent;
+    }
+
+    .events-card .service-icon-wrapper {
+      background: rgba(201, 168, 76, 0.08);
+      color: var(--gold);
+      border-color: rgba(201, 168, 76, 0.2);
+    }
+
+    .hospitality-card .service-icon-wrapper {
+      background: rgba(245, 240, 232, 0.08);
+      color: var(--warm-white);
+      border-color: rgba(245, 240, 232, 0.2);
+    }
+
+    .service-icon-wrapper svg {
+      width: 28px;
+      height: 28px;
+      fill: currentColor;
+    }
+
+    .service-header h3 {
+      font-size: 2rem;
+    }
+
+    .events-card h3 {
+      color: var(--gold);
+    }
+
+    .hospitality-card h3 {
+      color: var(--warm-white);
+    }
+
+    .service-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 1.8rem;
+    }
+
+    .service-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 1.2rem;
+    }
+
+    .service-icon-col {
+      flex-shrink: 0;
+      margin-top: 0.2rem;
+    }
+
+    .service-icon-col svg {
+      width: 18px;
+      height: 18px;
+    }
+
+    .events-card .service-icon-col svg {
+      fill: var(--gold);
+    }
+
+    .hospitality-card .service-icon-col svg {
+      fill: var(--warm-white);
+    }
+
+    .service-text-col strong {
+      display: block;
+      font-size: 1.05rem;
+      color: var(--warm-white);
+      margin-bottom: 0.25rem;
+      font-family: 'Playfair Display', serif;
+      font-weight: 500;
+      letter-spacing: 0.3px;
+    }
+
+    .service-text-col p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    /* Booking Forms Section */
+    .booking-section {
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      position: relative;
+    }
+
+    .booking-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(7, 10, 19, 0.92);
+      z-index: 1;
+    }
+
+    .booking-container {
+      position: relative;
+      z-index: 2;
+      max-width: 850px;
+      margin: 0 auto;
+    }
+
+    .form-card {
+      border-radius: 12px;
+      padding: 4.5rem 4rem;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    }
+
+    .form-card.event-booking {
+      background: linear-gradient(var(--soft-navy), var(--soft-navy)) padding-box,
+                  linear-gradient(135deg, var(--gold) 0%, rgba(201, 168, 76, 0.1) 100%) border-box;
+      border: 1px solid transparent;
+      box-shadow: 0 10px 40px rgba(201, 168, 76, 0.05);
+    }
+
+    .form-card.hospitality-booking {
+      background: linear-gradient(rgba(20, 29, 54, 0.4), rgba(20, 29, 54, 0.4)) padding-box,
+                  linear-gradient(135deg, var(--warm-white) 0%, rgba(245, 240, 232, 0.1) 100%) border-box;
+      border: 1px solid transparent;
+      backdrop-filter: blur(15px);
+      -webkit-backdrop-filter: blur(15px);
+    }
+
+    .form-card h3 {
+      font-size: 2.4rem;
+      text-align: center;
+      margin-bottom: 0.8rem;
+    }
+
+    .event-booking h3 {
+      color: var(--gold);
+    }
+
+    .hospitality-booking h3 {
+      color: var(--warm-white);
+    }
+
+    .form-desc {
+      text-align: center;
+      color: var(--text-muted);
+      margin-bottom: 3.5rem;
+      font-size: 0.95rem;
+      letter-spacing: 0.5px;
+    }
+
+    .form-desc span {
+      color: var(--gold);
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+
+    .form-group.full-width {
+      grid-column: span 2;
+    }
+
+    .form-label {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      font-weight: 600;
+    }
+
+    .event-booking .form-label {
+      color: var(--gold-light);
+    }
+
+    .hospitality-booking .form-label {
+      color: var(--warm-white);
+      opacity: 0.9;
+    }
+
+    .form-input, .form-select, .form-textarea {
+      background: rgba(7, 10, 19, 0.65);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 4px;
+      padding: 1rem 1.2rem;
+      font-family: 'Inter', sans-serif;
+      color: var(--warm-white);
+      font-size: 0.95rem;
+      outline: none;
+      transition: all var(--transition-fast);
+      width: 100%;
+    }
+
+    .event-booking .form-input:focus, 
+    .event-booking .form-select:focus, 
+    .event-booking .form-textarea:focus {
+      border-color: var(--gold);
+      box-shadow: 0 0 10px rgba(201, 168, 76, 0.2);
+      background: rgba(16, 23, 43, 0.8);
+    }
+
+    .hospitality-booking .form-input:focus, 
+    .hospitality-booking .form-select:focus, 
+    .hospitality-booking .form-textarea:focus {
+      border-color: var(--warm-white);
+      box-shadow: 0 0 10px rgba(245, 240, 232, 0.2);
+      background: rgba(24, 34, 61, 0.8);
+    }
+
+    .form-textarea {
+      resize: vertical;
+      min-height: 130px;
+    }
+
+    .form-submit {
+      margin-top: 2.5rem;
+      width: 100%;
+      display: flex;
+      gap: 0.8rem;
+    }
+
+    .form-submit svg {
+      width: 20px;
+      height: 20px;
+      fill: currentColor;
+    }
+
+    input[type="date"]::-webkit-calendar-picker-indicator {
+      filter: invert(0.9);
+      cursor: pointer;
+    }
+
+    /* About Us Section */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.1fr;
+      gap: 5rem;
+      align-items: center;
+    }
+
+    .about-image-wrapper {
+      position: relative;
+      border-radius: 8px;
+    }
+
+    /* Double Frame Styling for Luxury Layout */
+    .about-image-wrapper::before {
+      content: '';
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      width: 100%;
+      height: 100%;
+      border: 1px solid var(--gold);
+      border-radius: 8px;
+      z-index: 1;
+      pointer-events: none;
+      transition: transform var(--transition-normal);
+    }
+
+    .about-img-container {
+      border-radius: 8px;
+      overflow: hidden;
+      aspect-ratio: 4 / 3.2;
+      box-shadow: 0 25px 50px rgba(0, 0, 0, 0.6);
+      position: relative;
+      z-index: 2;
+    }
+
+    .about-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform var(--transition-slow);
+    }
+
+    .about-grid:hover .about-image {
+      transform: scale(1.05);
+    }
+
+    .about-grid:hover .about-image-wrapper::before {
+      transform: translate(-6px, -6px);
+    }
+
+    .about-content h3 {
+      font-size: 2.5rem;
+      color: var(--warm-white);
+      margin-bottom: 1.8rem;
+      line-height: 1.3;
+    }
+
+    .about-content h3 span {
+      color: var(--gold);
+      font-style: italic;
+    }
+
+    .about-text {
+      color: var(--text-muted);
+      margin-bottom: 3rem;
+      font-size: 1.05rem;
+      line-height: 1.85;
+    }
+
+    .about-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+      padding-top: 2.5rem;
+    }
+
+    .stat-card {
+      text-align: center;
+    }
+
+    .stat-number {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.8rem;
+      color: var(--gold);
+      font-weight: 600;
+      margin-bottom: 0.1rem;
+    }
+
+    .stat-label {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--text-muted);
+      font-weight: 600;
+    }
+
+    /* Gallery Section (Masonry Grid with Filters) */
+    .gallery-filters {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-bottom: 3.5rem;
+      flex-wrap: wrap;
+      position: relative;
+      z-index: 2;
+    }
+
+    .filter-btn {
+      background: transparent;
+      border: 1px solid rgba(201, 168, 76, 0.2);
+      color: var(--text-muted);
+      padding: 0.6rem 1.8rem;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      font-weight: 600;
+      font-family: 'Inter', sans-serif;
+      cursor: pointer;
+      border-radius: 30px;
+      transition: all var(--transition-normal);
+    }
+
+    .filter-btn:hover, .filter-btn.active {
+      border-color: var(--gold);
+      color: #070a13;
+      background: linear-gradient(135deg, var(--gold-light) 0%, var(--gold) 100%);
+      box-shadow: 0 4px 15px rgba(201, 168, 76, 0.25);
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.8rem;
+      grid-auto-flow: dense;
+      position: relative;
+      z-index: 2;
+    }
+
+    .gallery-item {
+      position: relative;
+      border-radius: 6px;
+      overflow: hidden;
+      cursor: pointer;
+      aspect-ratio: 4 / 3.2;
+      opacity: 1;
+      transform: scale(1);
+      transition: opacity 0.4s ease, transform 0.4s ease;
+    }
+
+    .gallery-item.tall {
+      aspect-ratio: 4 / 5.2;
+      grid-row: span 2;
+    }
+
+    .gallery-item.wide {
+      aspect-ratio: 1.8 / 1;
+      grid-column: span 2;
+    }
+
+    .gallery-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform var(--transition-slow);
+    }
+
+    .gallery-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(7, 10, 19, 0.7);
+      border: 0px solid var(--gold);
+      transition: all var(--transition-normal);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      gap: 0.5rem;
+      padding: 1.5rem;
+      text-align: center;
+    }
+
+    .gallery-overlay svg {
+      width: 36px;
+      height: 36px;
+      fill: var(--gold-light);
+      transform: scale(0.7);
+      transition: transform var(--transition-normal);
+    }
+
+    .gallery-overlay h4 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.3rem;
+      color: var(--warm-white);
+      transform: translateY(10px);
+      transition: transform var(--transition-normal);
+    }
+
+    .gallery-overlay p {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--gold);
+      transform: translateY(10px);
+      transition: transform var(--transition-normal);
+    }
+
+    /* Hover effects for masonry card */
+    .gallery-item:hover .gallery-img {
+      transform: scale(1.08);
+    }
+
+    .gallery-item:hover .gallery-overlay {
+      opacity: 1;
+      border: 3px solid var(--gold);
+    }
+
+    .gallery-item:hover .gallery-overlay svg {
+      transform: scale(1);
+    }
+
+    .gallery-item:hover .gallery-overlay h4,
+    .gallery-item:hover .gallery-overlay p {
+      transform: translateY(0);
+    }
+
+    /* Lightbox Modal styles */
+    .lightbox {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(4, 6, 12, 0.97);
+      z-index: 2000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity var(--transition-normal);
+      padding: 2rem;
+    }
+
+    .lightbox.active {
+      opacity: 1;
+      pointer-events: all;
+    }
+
+    .lightbox-content {
+      position: relative;
+      max-width: 90%;
+      max-height: 85vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transform: scale(0.96);
+      transition: transform var(--transition-normal);
+    }
+
+    .lightbox.active .lightbox-content {
+      transform: scale(1);
+    }
+
+    .lightbox-img {
+      max-width: 100%;
+      max-height: 75vh;
+      object-fit: contain;
+      border: 2px solid var(--gold);
+      border-radius: 4px;
+      box-shadow: 0 15px 50px rgba(0,0,0,0.8);
+    }
+
+    .lightbox-caption {
+      margin-top: 1rem;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.25rem;
+      color: var(--warm-white);
+      text-align: center;
+    }
+
+    .lightbox-close {
+      position: absolute;
+      top: -45px;
+      right: 0;
+      background: transparent;
+      border: none;
+      color: var(--warm-white);
+      font-size: 2.2rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.5rem;
+      transition: color var(--transition-fast), transform var(--transition-fast);
+    }
+
+    .lightbox-close:hover {
+      color: var(--gold);
+      transform: scale(1.1);
+    }
+
+    /* Contact Section */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 5rem;
+    }
+
+    .contact-info {
+      display: flex;
+      flex-direction: column;
+      gap: 2.2rem;
+    }
+
+    .contact-card {
+      background: var(--soft-navy);
+      border: 1px solid rgba(255, 255, 255, 0.04);
+      border-radius: 8px;
+      padding: 2.2rem;
+      display: flex;
+      gap: 1.8rem;
+      align-items: flex-start;
+      transition: transform var(--transition-normal), border-color var(--transition-normal);
+    }
+
+    .contact-card:hover {
+      transform: translateX(6px);
+      border-color: rgba(201, 168, 76, 0.35);
+    }
+
+    .contact-icon {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      background: rgba(201, 168, 76, 0.08);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--gold);
+      flex-shrink: 0;
+      border: 1px solid rgba(201, 168, 76, 0.15);
+    }
+
+    .contact-icon svg {
+      width: 22px;
+      height: 22px;
+      fill: currentColor;
+    }
+
+    .contact-details h4 {
+      font-size: 1rem;
+      color: var(--gold-light);
+      margin-bottom: 0.4rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: 600;
+    }
+
+    .contact-details p {
+      color: var(--warm-white);
+      font-size: 1.05rem;
+      margin-bottom: 0.2rem;
+    }
+
+    .contact-details a:hover {
+      color: var(--gold-light);
+    }
+
+    .contact-cta {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background: linear-gradient(135deg, rgba(20, 29, 54, 0.7) 0%, rgba(7, 10, 19, 0.8) 100%) padding-box,
+                  linear-gradient(135deg, var(--gold) 0%, rgba(201, 168, 76, 0.1) 100%) border-box;
+      border: 1px solid transparent;
+      border-radius: 8px;
+      padding: 4rem 3rem;
+      text-align: center;
+      align-items: center;
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+    }
+
+    .contact-cta h3 {
+      font-size: 2.2rem;
+      color: var(--warm-white);
+      margin-bottom: 1.2rem;
+    }
+
+    .contact-cta p {
+      color: var(--text-muted);
+      margin-bottom: 2.5rem;
+      max-width: 420px;
+      font-size: 0.95rem;
+      line-height: 1.7;
+    }
+
+    .contact-cta .btn-whatsapp-large {
+      background: #25d366;
+      color: #fff;
+      border: none;
+      gap: 0.8rem;
+      font-size: 1rem;
+      padding: 1.1rem 2.8rem;
+      box-shadow: 0 6px 20px rgba(37, 211, 102, 0.3);
+    }
+
+    .contact-cta .btn-whatsapp-large:hover {
+      background: #20ba5a;
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+    }
+
+    .contact-cta .btn-whatsapp-large svg {
+      width: 22px;
+      height: 22px;
+      fill: currentColor;
+    }
+
+    /* Floating WhatsApp Button */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 2.5rem;
+      right: 2.5rem;
+      z-index: 999;
+      display: flex;
+      align-items: center;
+      background: #25d366;
+      color: #fff;
+      padding: 0.8rem 1.5rem;
+      border-radius: 50px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4), 0 0 12px rgba(37, 211, 102, 0.25);
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 0.9rem;
+      letter-spacing: 0.5px;
+      gap: 0.7rem;
+      transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+      animation: pulse 2.5s infinite;
+    }
+
+    .whatsapp-float:hover {
+      transform: scale(1.05) translateY(-3px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5), 0 0 15px rgba(37, 211, 102, 0.45);
+      background: #20ba5a;
+    }
+
+    .whatsapp-float svg {
+      width: 24px;
+      height: 24px;
+      fill: currentColor;
+    }
+
+    @keyframes pulse {
+      0% {
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4), 0 0 0 0 rgba(37, 211, 102, 0.75);
+      }
+      70% {
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4), 0 0 0 15px rgba(37, 211, 102, 0);
+      }
+      100% {
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4), 0 0 0 0 rgba(37, 211, 102, 0);
+      }
+    }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid var(--gold);
+      background: #04060c;
+      padding: 5rem 0 2.5rem;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.6fr 1fr 1fr;
+      gap: 5rem;
+      margin-bottom: 4rem;
+    }
+
+    .footer-brand {
+      display: flex;
+      flex-direction: column;
+      gap: 1.4rem;
+    }
+
+    .footer-brand .brand {
+      align-self: flex-start;
+    }
+
+    .footer-brand p {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      max-width: 350px;
+      line-height: 1.65;
+    }
+
+    .footer-links h4, .footer-social h4 {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--gold-light);
+      margin-bottom: 1.8rem;
+      font-weight: 600;
+    }
+
+    .footer-menu {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .footer-menu a {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      transition: color var(--transition-fast), padding-left var(--transition-fast);
+    }
+
+    .footer-menu a:hover {
+      color: var(--gold);
+      padding-left: 6px;
+    }
+
+    .footer-social-links {
+      display: flex;
+      gap: 1.2rem;
+    }
+
+    .social-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.04);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--warm-white);
+      transition: all var(--transition-fast);
+      border: 1px solid rgba(255, 255, 255, 0.04);
+    }
+
+    .social-icon:hover {
+      background: var(--gold);
+      color: #070a13;
+      border-color: var(--gold);
+      transform: translateY(-4px);
+      box-shadow: 0 4px 15px rgba(201, 168, 76, 0.3);
+    }
+
+    .social-icon svg {
+      width: 20px;
+      height: 20px;
+      fill: currentColor;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+      padding-top: 2.2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+    }
+
+    /* Responsive Breakpoints */
+    @media (max-width: 1024px) {
+      .services-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+        gap: 4rem;
+      }
+
+      .about-img-container {
+        max-width: 600px;
+        margin: 0 auto;
+      }
+
+      .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .gallery-item.wide {
+        grid-column: span 1;
+        aspect-ratio: 4 / 3.2;
+      }
+
+      .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 3.5rem;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 3.5rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      header {
+        padding: 1.3rem 0;
+      }
+
+      header.scrolled {
+        padding: 1.1rem 0;
+      }
+
+      .menu-toggle {
+        display: flex;
+      }
+
+      .nav-menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 80%;
+        max-width: 320px;
+        height: 100vh;
+        background: #050810;
+        flex-direction: column;
+        justify-content: center;
+        gap: 2.5rem;
+        padding: 3rem;
+        transition: right var(--transition-normal);
+        box-shadow: -10px 0 40px rgba(0,0,0,0.6);
+        border-left: 1px solid rgba(201, 168, 76, 0.15);
+      }
+
+      .nav-menu.active {
+        right: 0;
+      }
+
+      .menu-toggle.active span:nth-child(1) {
+        transform: rotate(45deg) translate(3px, 2px);
+      }
+
+      .menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+        transform: scale(0);
+      }
+
+      .menu-toggle.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(3px, -2px);
+      }
+
+      .hero-content h1 {
+        font-size: 2.7rem;
+      }
+
+      .hero-content h1 span {
+        font-size: 1.15rem;
+        letter-spacing: 3px;
+      }
+
+      .hero-subtext {
+        font-size: 1.05rem;
+      }
+
+      .form-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .form-group.full-width {
+        grid-column: span 1;
+      }
+
+      .form-card {
+        padding: 3rem 1.8rem;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+      }
+
+      .whatsapp-float {
+        bottom: 1.5rem;
+        right: 1.5rem;
+        padding: 0.7rem 1.1rem;
+      }
+      
+      .whatsapp-float span {
+        display: none;
+      }
+      
+      .whatsapp-float {
+        border-radius: 50%;
+        width: 54px;
+        height: 54px;
+        justify-content: center;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .gallery-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .brand-text {
+        font-size: 1.6rem;
+      }
+
+      .hero-actions {
+        flex-direction: column;
+        width: 100%;
+      }
+
+      .hero-actions .btn {
+        width: 100%;
+      }
+
+      .about-stats {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Sticky Luxury Header & Navigation -->
+  <header id="header">
+    <div class="nav-container">
+      <a href="#home" class="brand" aria-label="Abraham Events Homepage">
+        <img src="logo.png" alt="Abraham Logo" class="logo-img" onerror="handleLogoError(this)">
+        <span id="brand-text" class="brand-text">Abraham</span>
+      </a>
+      
+      <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation menu" aria-controls="nav-menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#services" class="nav-link">Services</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#gallery" class="nav-link">Gallery</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="hero-slideshow" id="hero-slideshow">
+      <div class="hero-slide active" style="background-image: url('https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=1600&q=80');"></div>
+      <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1540541338287-41700207dee6?auto=format&fit=crop&w=1600&q=80');"></div>
+      <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?auto=format&fit=crop&w=1600&q=80');"></div>
+      <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1600&q=80');"></div>
+      <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1600&q=80');"></div>
+    </div>
+    
+    <div class="hero-overlay"></div>
+    
+    <div class="hero-content">
+      <h1 class="fade-in-up">
+        <span>Abraham Events & Hospitality</span>
+        Where Every Moment Becomes a Memory
+      </h1>
+      <p class="hero-subtext fade-in-up">
+        Premium Event Management & Luxury Hospitality Services in Kollam, Ernakulam & Across Kerala
+      </p>
+      <div class="hero-actions fade-in-up">
+        <a href="#book-event" class="btn btn-gold">Book an Event</a>
+        <a href="#book-hospitality" class="btn btn-outline">Book Hospitality</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 1: Services -->
+  <section class="container" id="services">
+    <div class="section-glow"></div>
+    <div class="section-title fade-in-up">
+      <h2>Our <span>Specialties</span></h2>
+    </div>
+    
+    <div class="services-grid">
+      <!-- Events Card -->
+      <div class="service-card events-card fade-in-up">
+        <div class="service-header">
+          <div class="service-icon-wrapper">
+            <svg viewBox="0 0 24 24">
+              <path d="M19,4H18V2H16V4H8V2H6V4H5A2,2 0 0,0 3,6V20A2,2 0 0,0 5,22H19A2,2 0 0,0 21,20V6A2,2 0 0,0 19,4M19,20H5V9H19V20M19,7H5V6H19V7M7,11H9V13H7V11M11,11H13V13H11V11M15,11H17V13H15V11M7,15H9V17H7V15M11,15H13V17H11V15M15,15H17V17H15V15Z" />
+            </svg>
+          </div>
+          <h3>Events Management</h3>
+        </div>
+        <ul class="service-list">
+          <li class="service-item">
+            <div class="service-icon-col">
+              <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+            </div>
+            <div class="service-text-col">
+              <strong>Weddings & Receptions</strong>
+              <p>Bespoke planning, royal entry staging, and backwater-view designs customized for traditional Kerala or contemporary themes.</p>
+            </div>
+          </li>
+          <li class="service-item">
+            <div class="service-icon-col">
+              <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+            </div>
+            <div class="service-text-col">
+              <strong>Corporate Events & Conferences</strong>
+              <p>Seamless management, acoustics setup, and hosting arrangements for executive conferences in Ernakulam and Kollam hotels.</p>
+            </div>
+          </li>
+          <li class="service-item">
+            <div class="service-icon-col">
+              <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+            </div>
+            <div class="service-text-col">
+              <strong>Birthday & Anniversary Celebrations</strong>
+              <p>Special themes, visual drapes, and entertainment features curated for close gatherings in our premium locations.</p>
+            </div>
+          </li>
+          <li class="service-item">
+            <div class="service-icon-col">
+              <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+            </div>
+            <div class="service-text-col">
+              <strong>Cultural & Social Events</strong>
+              <p>Organizing concerts, seasonal festivals, stage backdrops, and traditional visual programs with heritage styling.</p>
+            </div>
+          </li>
+          <li class="service-item">
+            <div class="service-icon-col">
+              <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+            </div>
+            <div class="service-text-col">
+              <strong>Stage Setup & Decoration</strong>
+              <p>Luxurious flower decorations, lighting layouts, and custom-made backdrops highlighting Kerala's artistic elements.</p>
+            </div>
+          </li>
+          <li class="service-item">
+            <div class="service-icon-col">
+              <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+            </div>
+            <div class="service-text-col">
+              <strong>Catering Coordination</strong>
+              <p>Coordinating premium catering desks to deliver traditional Kerala Sadya, local cuisines, and global menus.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+      
+      <!-- Hospitality Card -->
+      <div class="service-card hospitality-card fade-in-up">
+        <div class="service-header">
+          <div class="service-icon-wrapper">
+            <svg viewBox="0 0 24 24">
+              <path d="M19 7h-8v7H3V5H1v15h2v-3h18v3h2v-9a4 4 0 0 0-4-4zm-8 5H3V9h8v3z" />
+            </svg>
+          </div>
+          <h3>Hospitality Management</h3>
+        </div>
+        <ul class="service-list">
+          <li class="service-item">
+            <div class="service-icon-col">
+              <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+            </div>
+            <div class="service-text-col">
+              <strong>Luxury Hotel Bookings</strong>
+              <p>Privileged room bookings, hotel stays, and rates at Kerala's leading luxury hotels and private retreats.</p>
+            </div>
+          </li>
+          <li class="service-item">
+            <div class="service-icon-col">
+              <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+            </div>
+            <div class="service-text-col">
+              <strong>Resort & Retreat Planning</strong>
+              <p>Planning serene stays, beach-side retreats, and Ayurvedic resort experiences in Kollam and Ernakulam.</p>
+            </div>
+          </li>
+          <li class="service-item">
+            <div class="service-icon-col">
+              <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+            </div>
+            <div class="service-text-col">
+              <strong>VIP Guest Management</strong>
+              <p>Dedicated local hosts, meet-and-greets, security arrangements, and custom tours for VIP delegations.</p>
+            </div>
+          </li>
+          <li class="service-item">
+            <div class="service-icon-col">
+              <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+            </div>
+            <div class="service-text-col">
+              <strong>Fine Dining Arrangements</strong>
+              <p>Securing private dining tables, arranging local delicacies, and coordinating backwater luxury cruise dining.</p>
+            </div>
+          </li>
+          <li class="service-item">
+            <div class="service-icon-col">
+              <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+            </div>
+            <div class="service-text-col">
+              <strong>Travel & Transfer Coordination</strong>
+              <p>Providing premium chauffeured airport pickups from Cochin Airport (COK) or Trivandrum Airport (TRV).</p>
+            </div>
+          </li>
+          <li class="service-item">
+            <div class="service-icon-col">
+              <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+            </div>
+            <div class="service-text-col">
+              <strong>Honeymoon Packages</strong>
+              <p>Romantic backwater resort packages, sunset beach stays, and curated luxury experiences for couples.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 2: Book an Event Form -->
+  <section class="booking-section" id="book-event" style="background-image: url('https://images.unsplash.com/photo-1469371670807-013ccf25f16a?auto=format&fit=crop&w=1600&q=80');">
+    <div class="container booking-container">
+      <div class="form-card event-booking fade-in-up">
+        <h3>Book an Event</h3>
+        <p class="form-desc">Share your event coordinates at our <span>Kollam</span> or <span>Ernakulam</span> desks</p>
+        
+        <form id="event-form" onsubmit="handleEventSubmit(event)">
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="event-name" class="form-label">Full Name *</label>
+              <input type="text" id="event-name" class="form-input" placeholder="Enter your full name" required>
+            </div>
+            <div class="form-group">
+              <label for="event-phone" class="form-label">Phone Number *</label>
+              <input type="tel" id="event-phone" class="form-input" placeholder="e.g. +91 8086763574" required>
+            </div>
+            <div class="form-group">
+              <label for="event-email" class="form-label">Email Address *</label>
+              <input type="email" id="event-email" class="form-input" placeholder="name@domain.com" required>
+            </div>
+            <div class="form-group">
+              <label for="event-type" class="form-label">Event Type *</label>
+              <select id="event-type" class="form-select" required>
+                <option value="" disabled selected>Select event type</option>
+                <option value="Wedding">Wedding</option>
+                <option value="Corporate">Corporate</option>
+                <option value="Birthday">Birthday</option>
+                <option value="Anniversary">Anniversary</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="event-date" class="form-label">Event Date *</label>
+              <input type="date" id="event-date" class="form-input" required>
+            </div>
+            <div class="form-group">
+              <label for="event-guests" class="form-label">Expected Guests *</label>
+              <input type="number" id="event-guests" class="form-input" min="1" placeholder="Number of attendees" required>
+            </div>
+            <div class="form-group full-width">
+              <label for="event-venue" class="form-label">Venue Preference</label>
+              <input type="text" id="event-venue" class="form-input" placeholder="e.g. Grand Hyatt Bolgatty Ernakulam, The Raviz Ashtamudi Kollam, or venue in Kerala">
+            </div>
+            <div class="form-group full-width">
+              <label for="event-reqs" class="form-label">Special Requirements</label>
+              <textarea id="event-reqs" class="form-textarea" placeholder="Describe decoration themes, Kerala Sadya catering preferences, or any specific details..."></textarea>
+            </div>
+          </div>
+          
+          <button type="submit" class="btn btn-gold form-submit">
+            <svg viewBox="0 0 24 24">
+              <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.47 16.86L2.03 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.9C17.18 3.03 14.69 2 12.04 2M12.05 3.67C16.6 3.67 20.28 7.37 20.28 11.92C20.28 14.1 19.43 16.14 17.89 17.68C16.35 19.22 14.3 20.08 12.12 20.08C10.75 20.08 9.42 19.73 8.24 19.08L7.96 18.92L4.82 19.74L5.67 16.7L5.49 16.42C4.78 15.29 4.4 13.97 4.4 12.6C4.4 8.04 8.08 4.36 12.63 4.36L12.64 4.36M10.14 8C9.9 8 9.5 8.1 9.17 8.44C8.83 8.78 7.9 9.7 7.9 11.53C7.9 13.36 9.23 15.12 9.42 15.37C9.6 15.61 12 19.33 15.71 20.93C16.6 21.3 17.28 21.5 17.82 21.36C18.43 21.27 19.7 20.59 19.96 19.86C20.22 19.12 20.22 18.5 20.14 18.37C20.06 18.24 19.84 18.17 19.5 18C19.17 17.84 17.55 17.04 17.25 16.93C16.95 16.82 16.73 16.77 16.5 17.1C16.28 17.43 15.64 18.17 15.45 18.39C15.26 18.61 15.07 18.63 14.73 18.47C14.39 18.3 13.06 17.87 11.48 16.46C10.25 15.36 9.42 14 9.18 13.6C8.94 13.2 9.16 13 9.32 12.83C9.48 12.66 9.68 12.4 9.85 12.2C10 12 10.08 11.83 10.19 11.6C10.3 11.37 10.24 11.17 10.16 11C10.08 10.83 9.42 9.21 9.14 8.55C8.87 7.9 8.59 8 8.39 8C8.19 8 8 8 7.8 8" />
+            </svg>
+            Send Enquiry via WhatsApp
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 3: Book Hospitality Form -->
+  <section class="booking-section" id="book-hospitality" style="background-image: url('https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1600&q=80');">
+    <div class="container booking-container">
+      <div class="form-card hospitality-booking fade-in-up">
+        <h3>Book Hospitality</h3>
+        <p class="form-desc">Secure luxury stays and premium travel experiences with our personal concierge desk</p>
+        
+        <form id="hospitality-form" onsubmit="handleHospitalitySubmit(event)">
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="hosp-name" class="form-label">Full Name *</label>
+              <input type="text" id="hosp-name" class="form-input" placeholder="Enter your full name" required>
+            </div>
+            <div class="form-group">
+              <label for="hosp-phone" class="form-label">Phone Number *</label>
+              <input type="tel" id="hosp-phone" class="form-input" placeholder="e.g. +91 98957 83763" required>
+            </div>
+            <div class="form-group">
+              <label for="hosp-email" class="form-label">Email Address *</label>
+              <input type="email" id="hosp-email" class="form-input" placeholder="name@domain.com" required>
+            </div>
+            <div class="form-group">
+              <label for="hosp-type" class="form-label">Service Type *</label>
+              <select id="hosp-type" class="form-select" required>
+                <option value="" disabled selected>Select service type</option>
+                <option value="Hotel Booking">Hotel Booking</option>
+                <option value="Resort Planning">Resort & Retreat Planning</option>
+                <option value="Fine Dining">Fine Dining Arrangements</option>
+                <option value="VIP Package">VIP Guest Package</option>
+                <option value="Honeymoon">Honeymoon Package</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="hosp-checkin" class="form-label">Check-in Date *</label>
+              <input type="date" id="hosp-checkin" class="form-input" required>
+            </div>
+            <div class="form-group">
+              <label for="hosp-checkout" class="form-label">Check-out Date *</label>
+              <input type="date" id="hosp-checkout" class="form-input" required>
+            </div>
+            <div class="form-group">
+              <label for="hosp-guests" class="form-label">Number of Guests *</label>
+              <input type="number" id="hosp-guests" class="form-input" min="1" placeholder="Number of guests" required>
+            </div>
+            <div class="form-group">
+              <label for="hosp-budget" class="form-label">Budget Range *</label>
+              <select id="hosp-budget" class="form-select" required>
+                <option value="" disabled selected>Select budget per night</option>
+                <option value="Under ₹10K">Under ₹10,000</option>
+                <option value="₹10K–₹25K">₹10,000 – ₹25,000</option>
+                <option value="₹25K–₹50K">₹25,000 – ₹50,000</option>
+                <option value="₹50K+">₹50,000+</option>
+              </select>
+            </div>
+            <div class="form-group full-width">
+              <label for="hosp-reqs" class="form-label">Special Requests</label>
+              <textarea id="hosp-reqs" class="form-textarea" placeholder="e.g. Ashtamudi houseboat stays in Kollam, Grand Hyatt suite layouts in Ernakulam, VIP airport transfers..."></textarea>
+            </div>
+          </div>
+          
+          <button type="submit" class="btn btn-outline form-submit" style="border-color: var(--warm-white); background: var(--warm-white); color: #070a13;">
+            <svg viewBox="0 0 24 24">
+              <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.47 16.86L2.03 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.9C17.18 3.03 14.69 2 12.04 2M12.05 3.67C16.6 3.67 20.28 7.37 20.28 11.92C20.28 14.1 19.43 16.14 17.89 17.68C16.35 19.22 14.3 20.08 12.12 20.08C10.75 20.08 9.42 19.73 8.24 19.08L7.96 18.92L4.82 19.74L5.67 16.7L5.49 16.42C4.78 15.29 4.4 13.97 4.4 12.6C4.4 8.04 8.08 4.36 12.63 4.36L12.64 4.36M10.14 8C9.9 8 9.5 8.1 9.17 8.44C8.83 8.78 7.9 9.7 7.9 11.53C7.9 13.36 9.23 15.12 9.42 15.37C9.6 15.61 12 19.33 15.71 20.93C16.6 21.3 17.28 21.5 17.82 21.36C18.43 21.27 19.7 20.59 19.96 19.86C20.22 19.12 20.22 18.5 20.14 18.37C20.06 18.24 19.84 18.17 19.5 18C19.17 17.84 17.55 17.04 17.25 16.93C16.95 16.82 16.73 16.77 16.5 17.1C16.28 17.43 15.64 18.17 15.45 18.39C15.26 18.61 15.07 18.63 14.73 18.47C14.39 18.3 13.06 17.87 11.48 16.46C10.25 15.36 9.42 14 9.18 13.6C8.94 13.2 9.16 13 9.32 12.83C9.48 12.66 9.68 12.4 9.85 12.2C10 12 10.08 11.83 10.19 11.6C10.3 11.37 10.24 11.17 10.16 11C10.08 10.83 9.42 9.21 9.14 8.55C8.87 7.9 8.59 8 8.39 8C8.19 8 8 8 7.8 8" />
+            </svg>
+            Send Enquiry via WhatsApp
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 4: About Us -->
+  <section class="container" id="about">
+    <div class="section-glow"></div>
+    <div class="about-grid">
+      <div class="about-image-wrapper fade-in-up">
+        <div class="about-img-container">
+          <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=800&q=80" alt="Event planning consultation meeting" class="about-image">
+        </div>
+      </div>
+      <div class="about-content fade-in-up">
+        <h3>About <span>Abraham Events & Hospitality</span></h3>
+        <p class="about-text">
+          Based in the primary commercial hubs of Kollam and Ernakulam, Abraham Events & Hospitality Management is Kerala's leading name in luxury event planning and premium hospitality curation. From serene lakeside weddings on Ashtamudi Lake in Kollam to grand corporate congresses and destination celebrations in Kochi/Ernakulam, we bring your vision to life with meticulous attention to detail, creativity, and passion.
+        </p>
+        
+        <div class="about-stats">
+          <div class="stat-card">
+            <div class="stat-number">500+</div>
+            <div class="stat-label">Events</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">1000+</div>
+            <div class="stat-label">Happy Clients</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">10+</div>
+            <div class="stat-label">Years Experience</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 5: Gallery Portfolio (Dynamic Filtering) -->
+  <section class="container" id="gallery">
+    <div class="section-title fade-in-up">
+      <h2>Curated <span>Portfolio</span></h2>
+    </div>
+    
+    <!-- Gallery Filter buttons -->
+    <div class="gallery-filters fade-in-up">
+      <button class="filter-btn active" data-filter="all">All Photos</button>
+      <button class="filter-btn" data-filter="events">Signature Events</button>
+      <button class="filter-btn" data-filter="hospitality">Stay & Dining</button>
+      <button class="filter-btn" data-filter="weddings">Grand Weddings</button>
+    </div>
+    
+    <div class="gallery-grid fade-in-up" id="gallery-grid">
+      <!-- Item 1 (Weddings) -->
+      <div class="gallery-item tall" data-category="weddings" onclick="openLightbox(this)">
+        <img src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=800&q=80" alt="Spectacular outdoor wedding altar setup by Abraham Events" class="gallery-img">
+        <div class="gallery-overlay">
+          <svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+          <h4>Grand Altar Ceremony</h4>
+          <p>Grand Weddings</p>
+        </div>
+      </div>
+      
+      <!-- Item 2 (Hospitality) -->
+      <div class="gallery-item" data-category="hospitality" onclick="openLightbox(this)">
+        <img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=800&q=80" alt="Opulent master suite bedroom interior by Abraham Hospitality" class="gallery-img">
+        <div class="gallery-overlay">
+          <svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+          <h4>Luxury Concierge Suite</h4>
+          <p>Stay & Dining</p>
+        </div>
+      </div>
+      
+      <!-- Item 3 (Events) -->
+      <div class="gallery-item tall" data-category="events" onclick="openLightbox(this)">
+        <img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=800&q=80" alt="Champagne pouring tower during high-end corporate gala dinner" class="gallery-img">
+        <div class="gallery-overlay">
+          <svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+          <h4>Gala Champagne Pour</h4>
+          <p>Signature Events</p>
+        </div>
+      </div>
+      
+      <!-- Item 4 (Hospitality) -->
+      <div class="gallery-item wide" data-category="hospitality" onclick="openLightbox(this)">
+        <img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?auto=format&fit=crop&w=800&q=80" alt="Grand hotel reception and lobby lounge" class="gallery-img">
+        <div class="gallery-overlay">
+          <svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+          <h4>5-Star Lobby Reception</h4>
+          <p>Stay & Dining</p>
+        </div>
+      </div>
+      
+      <!-- Item 5 (Hospitality) -->
+      <div class="gallery-item" data-category="hospitality" onclick="openLightbox(this)">
+        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80" alt="Luxury beachfront resort landscape at sunset" class="gallery-img">
+        <div class="gallery-overlay">
+          <svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+          <h4>Sunset Lounge Retreat</h4>
+          <p>Stay & Dining</p>
+        </div>
+      </div>
+      
+      <!-- Item 6 (Events) -->
+      <div class="gallery-item" data-category="events" onclick="openLightbox(this)">
+        <img src="https://images.unsplash.com/photo-1522413425104-a14afcde327e?auto=format&fit=crop&w=800&q=80" alt="Breathtaking grand ballroom event stage setup" class="gallery-img">
+        <div class="gallery-overlay">
+          <svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+          <h4>Grand Ballroom Stage</h4>
+          <p>Signature Events</p>
+        </div>
+      </div>
+
+      <!-- Item 7 (Weddings) -->
+      <div class="gallery-item wide" data-category="weddings" onclick="openLightbox(this)">
+        <img src="https://images.unsplash.com/photo-1519225495810-7512c696505a?auto=format&fit=crop&w=800&q=80" alt="Exquisite candlelight wedding reception table settings" class="gallery-img">
+        <div class="gallery-overlay">
+          <svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+          <h4>Candlelit Feast Seating</h4>
+          <p>Grand Weddings</p>
+        </div>
+      </div>
+
+      <!-- Item 8 (Hospitality) -->
+      <div class="gallery-item" data-category="hospitality" onclick="openLightbox(this)">
+        <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=800&q=80" alt="Stunning infinity pool layout at a luxury tropical resort" class="gallery-img">
+        <div class="gallery-overlay">
+          <svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+          <h4>Tropical Infinity Pool</h4>
+          <p>Stay & Dining</p>
+        </div>
+      </div>
+
+      <!-- Item 9 (Events) -->
+      <div class="gallery-item tall" data-category="events" onclick="openLightbox(this)">
+        <img src="https://images.unsplash.com/photo-1505232458627-539f9765a507?auto=format&fit=crop&w=800&q=80" alt="Beautiful glass pavilion structure at an outdoor luxury evening party" class="gallery-img">
+        <div class="gallery-overlay">
+          <svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+          <h4>Garden Glass Pavilion</h4>
+          <p>Signature Events</p>
+        </div>
+      </div>
+
+      <!-- Item 10 (Events) -->
+      <div class="gallery-item" data-category="events" onclick="openLightbox(this)">
+        <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=800&q=80" alt="Modern corporate conference hall layout setup" class="gallery-img">
+        <div class="gallery-overlay">
+          <svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+          <h4>Executive Conference Setup</h4>
+          <p>Signature Events</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 6: Contact -->
+  <section class="container" id="contact">
+    <div class="section-glow"></div>
+    <div class="section-title fade-in-up">
+      <h2>Contact <span>Coordinates</span></h2>
+    </div>
+    
+    <div class="contact-grid">
+      <div class="contact-info fade-in-up">
+        <!-- Address card - Kollam -->
+        <div class="contact-card">
+          <div class="contact-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          </div>
+          <div class="contact-details">
+            <h4>Kollam Office</h4>
+            <p>Abraham Plaza, Beach Road, Kollam, Kerala - 691001</p>
+          </div>
+        </div>
+
+        <!-- Address card - Ernakulam -->
+        <div class="contact-card">
+          <div class="contact-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          </div>
+          <div class="contact-details">
+            <h4>Ernakulam Corporate Suite</h4>
+            <p>Abraham Heights, MG Road, Ernakulam, Kerala - 682016</p>
+          </div>
+        </div>
+
+        <!-- Phone 1 card -->
+        <div class="contact-card">
+          <div class="contact-icon">
+            <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+          </div>
+          <div class="contact-details">
+            <h4>Events Desk Phone</h4>
+            <p><a href="tel:8086763574">8086763574</a></p>
+          </div>
+        </div>
+        
+        <!-- Phone 2 card -->
+        <div class="contact-card">
+          <div class="contact-icon">
+            <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+          </div>
+          <div class="contact-details">
+            <h4>Hospitality Desk Phone</h4>
+            <p><a href="tel:+919895783763">+91 98957 83763</a></p>
+          </div>
+        </div>
+        
+        <!-- Email card -->
+        <div class="contact-card">
+          <div class="contact-icon">
+            <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          </div>
+          <div class="contact-details">
+            <h4>Email Address</h4>
+            <p><a href="mailto:abrahamevents@gmail.com">abrahamevents@gmail.com</a></p>
+          </div>
+        </div>
+        
+        <!-- Instagram card -->
+        <div class="contact-card">
+          <div class="contact-icon">
+            <svg viewBox="0 0 24 24"><path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8A3.6 3.6 0 0 0 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6A3.6 3.6 0 0 0 16.4 4H7.6m8.22 2.5a1 1 0 1 1 0 2 1 1 0 0 1 0-2M12 7c2.76 0 5 2.24 5 5s-2.24 5-5 5-5-2.24-5-5 2.24-5 5-5m0 2c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+          </div>
+          <div class="contact-details">
+            <h4>Follow Instagram</h4>
+            <p><a href="https://instagram.com/abrahamvents" target="_blank" rel="noopener">@abrahamvents</a></p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Large Prominent Chat on WhatsApp Card -->
+      <div class="contact-cta fade-in-up">
+        <h3>Connect Directly</h3>
+        <p>Skip the forms entirely and connect with our coordinators instantly on WhatsApp. We are available to discuss and bring your requirements to fruition.</p>
+        <a href="https://wa.me/918086763574" class="btn btn-whatsapp-large" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24">
+            <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.47 16.86L2.03 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.9C17.18 3.03 14.69 2 12.04 2M12.05 3.67C16.6 3.67 20.28 7.37 20.28 11.92C20.28 14.1 19.43 16.14 17.89 17.68C16.35 19.22 14.3 20.08 12.12 20.08C10.75 20.08 9.42 19.73 8.24 19.08L7.96 18.92L4.82 19.74L5.67 16.7L5.49 16.42C4.78 15.29 4.4 13.97 4.4 12.6C4.4 8.04 8.08 4.36 12.63 4.36L12.64 4.36M10.14 8C9.9 8 9.5 8.1 9.17 8.44C8.83 8.78 7.9 9.7 7.9 11.53C7.9 13.36 9.23 15.12 9.42 15.37C9.6 15.61 12 19.33 15.71 20.93C16.6 21.3 17.28 21.5 17.82 21.36C18.43 21.27 19.7 20.59 19.96 19.86C20.22 19.12 20.22 18.5 20.14 18.37C20.06 18.24 19.84 18.17 19.5 18C19.17 17.84 17.55 17.04 17.25 16.93C16.95 16.82 16.73 16.77 16.5 17.1C16.28 17.43 15.64 18.17 15.45 18.39C15.26 18.61 15.07 18.63 14.73 18.47C14.39 18.3 13.06 17.87 11.48 16.46C10.25 15.36 9.42 14 9.18 13.6C8.94 13.2 9.16 13 9.32 12.83C9.48 12.66 9.68 12.4 9.85 12.2C10 12 10.08 11.83 10.19 11.6C10.3 11.37 10.24 11.17 10.16 11C10.08 10.83 9.42 9.21 9.14 8.55C8.87 7.9 8.59 8 8.39 8C8.19 8 8 8 7.8 8" />
+          </svg>
+          Chat on WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lightbox Modal (Pure JS, No external libraries) -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image lightbox viewer" onclick="closeLightboxOnBackdrop(event)">
+    <div class="lightbox-content">
+      <button class="lightbox-close" onclick="closeLightbox()" aria-label="Close image viewer">&times;</button>
+      <img src="" alt="" id="lightbox-img" class="lightbox-img">
+      <div id="lightbox-caption" class="lightbox-caption"></div>
+    </div>
+  </div>
+
+  <!-- Floating WhatsApp Button Widget -->
+  <a href="https://wa.me/918086763574" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat with us on WhatsApp">
+    <svg viewBox="0 0 24 24">
+      <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.47 16.86L2.03 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.9C17.18 3.03 14.69 2 12.04 2M12.05 3.67C16.6 3.67 20.28 7.37 20.28 11.92C20.28 14.1 19.43 16.14 17.89 17.68C16.35 19.22 14.3 20.08 12.12 20.08C10.75 20.08 9.42 19.73 8.24 19.08L7.96 18.92L4.82 19.74L5.67 16.7L5.49 16.42C4.78 15.29 4.4 13.97 4.4 12.6C4.4 8.04 8.08 4.36 12.63 4.36L12.64 4.36M10.14 8C9.9 8 9.5 8.1 9.17 8.44C8.83 8.78 7.9 9.7 7.9 11.53C7.9 13.36 9.23 15.12 9.42 15.37C9.6 15.61 12 19.33 15.71 20.93C16.6 21.3 17.28 21.5 17.82 21.36C18.43 21.27 19.7 20.59 19.96 19.86C20.22 19.12 20.22 18.5 20.14 18.37C20.06 18.24 19.84 18.17 19.5 18C19.17 17.84 17.55 17.04 17.25 16.93C16.95 16.82 16.73 16.77 16.5 17.1C16.28 17.43 15.64 18.17 15.45 18.39C15.26 18.61 15.07 18.63 14.73 18.47C14.39 18.3 13.06 17.87 11.48 16.46C10.25 15.36 9.42 14 9.18 13.6C8.94 13.2 9.16 13 9.32 12.83C9.48 12.66 9.68 12.4 9.85 12.2C10 12 10.08 11.83 10.19 11.6C10.3 11.37 10.24 11.17 10.16 11C10.08 10.83 9.42 9.21 9.14 8.55C8.87 7.9 8.59 8 8.39 8C8.19 8 8 8 7.8 8" />
+    </svg>
+    <span>Chat with Us</span>
+  </a>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container" style="padding-top:0; padding-bottom: 2rem;">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#home" class="brand" aria-label="Abraham Events Homepage">
+            <img src="logo.png" alt="Abraham Logo" class="logo-img" onerror="handleLogoError(this)">
+            <span class="brand-text">Abraham</span>
+          </a>
+          <p>Bespoke event planning and ultra-luxury hospitality management services based in Kollam and Ernakulam, Kerala. Curated for those who demand the finest experiences.</p>
+        </div>
+        
+        <div class="footer-links">
+          <h4>Quick Navigation</h4>
+          <ul class="footer-menu">
+            <li><a href="#services">Our Services</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#gallery">Curated Portfolio</a></li>
+            <li><a href="#contact">Contact Coordinates</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-social">
+          <h4>Social Channels</h4>
+          <div class="footer-social-links">
+            <a href="https://instagram.com/abrahamvents" class="social-icon" target="_blank" rel="noopener" aria-label="Instagram Link">
+              <svg viewBox="0 0 24 24"><path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8A3.6 3.6 0 0 0 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6A3.6 3.6 0 0 0 16.4 4H7.6m8.22 2.5a1 1 0 1 1 0 2 1 1 0 0 1 0-2M12 7c2.76 0 5 2.24 5 5s-2.24 5-5 5-5-2.24-5-5 2.24-5 5-5m0 2c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2026 Abraham Events & Hospitality Management. All rights reserved.</p>
+        <p>Based in Kollam & Ernakulam, Kerala. Serving Clients Across India</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    /* 0. Security: Input Sanitization Utility */
+    function sanitizeInput(str) {
+      if (typeof str !== 'string') return '';
+      // Strip HTML/script tags
+      const temp = document.createElement('div');
+      temp.textContent = str;
+      let sanitized = temp.innerHTML;
+      // Remove potentially dangerous characters for URL injection
+      sanitized = sanitized.replace(/[<>"'`\\]/g, '');
+      // Trim excessive whitespace
+      sanitized = sanitized.replace(/\s{2,}/g, ' ').trim();
+      // Limit max length to prevent abuse
+      return sanitized.substring(0, 500);
+    }
+
+    /* 0b. Security: Rate Limiting for Form Submissions */
+    const formSubmitTimestamps = {};
+    function isRateLimited(formId, cooldownMs) {
+      const now = Date.now();
+      if (formSubmitTimestamps[formId] && (now - formSubmitTimestamps[formId]) < cooldownMs) {
+        return true;
+      }
+      formSubmitTimestamps[formId] = now;
+      return false;
+    }
+
+    /* 1. Logo Fallback Handler */
+    function handleLogoError(img) {
+      img.style.display = 'none';
+      const brandTexts = document.querySelectorAll('.brand-text');
+      brandTexts.forEach(txt => {
+        txt.style.display = 'inline-block';
+        txt.style.borderBottom = 'none';
+      });
+    }
+
+    /* 2. Sticky Navbar Scroll class toggler & Active Link Tracker */
+    const header = document.getElementById('header');
+    const sections = document.querySelectorAll('section, header');
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+
+      let current = '';
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        if (window.scrollY >= sectionTop - 120) {
+          current = section.getAttribute('id');
+        }
+      });
+
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href').includes(current)) {
+          link.classList.add('active');
+        }
+      });
+    });
+
+    /* 3. Mobile Hamburger Menu Toggle */
+    const menuToggle = document.getElementById('menu-toggle');
+    const navMenu = document.getElementById('nav-menu');
+
+    menuToggle.addEventListener('click', () => {
+      const expanded = menuToggle.getAttribute('aria-expanded') === 'true';
+      menuToggle.setAttribute('aria-expanded', !expanded);
+      menuToggle.classList.toggle('active');
+      navMenu.classList.toggle('active');
+    });
+
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        menuToggle.setAttribute('aria-expanded', 'false');
+        menuToggle.classList.remove('active');
+        navMenu.classList.remove('active');
+      });
+    });
+
+    /* 4. Background Image Slideshow Carousel (Hero Section) */
+    const slides = document.querySelectorAll('.hero-slide');
+    let currentSlide = 0;
+    const slideInterval = 4000;
+
+    function nextSlide() {
+      slides[currentSlide].classList.remove('active');
+      currentSlide = (currentSlide + 1) % slides.length;
+      slides[currentSlide].classList.add('active');
+    }
+
+    setInterval(nextSlide, slideInterval);
+
+    /* 5. Scroll-triggered Fade-in Animations (IntersectionObserver) */
+    const animElements = document.querySelectorAll('.fade-in-up');
+    
+    const observerOptions = {
+      root: null,
+      threshold: 0.08,
+      rootMargin: '0px 0px -40px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+
+    animElements.forEach(el => {
+      observer.observe(el);
+    });
+
+    /* 6. WhatsApp Event Booking Form Submission */
+    function handleEventSubmit(e) {
+      e.preventDefault();
+      
+      // Rate limit: 1 submission per 10 seconds
+      if (isRateLimited('event-form', 10000)) {
+        alert('Please wait a few seconds before submitting again.');
+        return;
+      }
+      
+      // Sanitize all inputs
+      const name = sanitizeInput(document.getElementById('event-name').value);
+      const phone = sanitizeInput(document.getElementById('event-phone').value);
+      const email = sanitizeInput(document.getElementById('event-email').value);
+      const eventType = sanitizeInput(document.getElementById('event-type').value);
+      const date = sanitizeInput(document.getElementById('event-date').value);
+      const guests = sanitizeInput(document.getElementById('event-guests').value);
+      const venue = sanitizeInput(document.getElementById('event-venue').value) || 'Not specified';
+      const requirements = sanitizeInput(document.getElementById('event-reqs').value) || 'No special requirements specified.';
+      
+      // Validate email format
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(email)) {
+        alert('Please enter a valid email address.');
+        return;
+      }
+      
+      // Validate phone (digits, spaces, +, -, parentheses only)
+      const phoneRegex = /^[\d\s+\-()]{7,20}$/;
+      if (!phoneRegex.test(phone)) {
+        alert('Please enter a valid phone number.');
+        return;
+      }
+      
+      const whatsappNumber = '918086763574';
+      
+      const message = `✨ *New Event Enquiry* ✨\n\n` +
+                      `👤 *Name:* ${name}\n` +
+                      `📞 *Phone:* ${phone}\n` +
+                      `📧 *Email:* ${email}\n` +
+                      `📅 *Event Type:* ${eventType}\n` +
+                      `📆 *Event Date:* ${date}\n` +
+                      `👥 *Expected Guests:* ${guests}\n` +
+                      `📍 *Venue Preference:* ${venue}\n\n` +
+                      `📝 *Special Requirements:* \n_${requirements}_`;
+
+      const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+      window.open(whatsappUrl, '_blank');
+    }
+
+    /* 7. WhatsApp Hospitality Booking Form Submission */
+    function handleHospitalitySubmit(e) {
+      e.preventDefault();
+      
+      // Rate limit: 1 submission per 10 seconds
+      if (isRateLimited('hospitality-form', 10000)) {
+        alert('Please wait a few seconds before submitting again.');
+        return;
+      }
+      
+      // Sanitize all inputs
+      const name = sanitizeInput(document.getElementById('hosp-name').value);
+      const phone = sanitizeInput(document.getElementById('hosp-phone').value);
+      const email = sanitizeInput(document.getElementById('hosp-email').value);
+      const serviceType = sanitizeInput(document.getElementById('hosp-type').value);
+      const checkIn = sanitizeInput(document.getElementById('hosp-checkin').value);
+      const checkOut = sanitizeInput(document.getElementById('hosp-checkout').value);
+      const guests = sanitizeInput(document.getElementById('hosp-guests').value);
+      const budget = sanitizeInput(document.getElementById('hosp-budget').value);
+      const requests = sanitizeInput(document.getElementById('hosp-reqs').value) || 'No special requests.';
+      
+      // Validate email format
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(email)) {
+        alert('Please enter a valid email address.');
+        return;
+      }
+      
+      // Validate phone (digits, spaces, +, -, parentheses only)
+      const phoneRegex = /^[\d\s+\-()]{7,20}$/;
+      if (!phoneRegex.test(phone)) {
+        alert('Please enter a valid phone number.');
+        return;
+      }
+      
+      // Validate check-out is after check-in
+      if (checkIn && checkOut && new Date(checkOut) <= new Date(checkIn)) {
+        alert('Check-out date must be after check-in date.');
+        return;
+      }
+      
+      const whatsappNumber = '919895783763';
+      
+      const message = `🏨 *New Hospitality stay Enquiry* 🏨\n\n` +
+                      `👤 *Name:* ${name}\n` +
+                      `📞 *Phone:* ${phone}\n` +
+                      `📧 *Email:* ${email}\n` +
+                      `🛎️ *Service Type:* ${serviceType}\n` +
+                      `📅 *Check-in Date:* ${checkIn}\n` +
+                      `📆 *Check-out Date:* ${checkOut}\n` +
+                      `👥 *Number of Guests:* ${guests}\n` +
+                      `💰 *Budget Range:* ${budget}\n\n` +
+                      `📝 *Special Requests:* \n_${requests}_`;
+
+      const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+      window.open(whatsappUrl, '_blank');
+    }
+
+    /* 8. Dynamic Gallery Filtering */
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const galleryItems = document.querySelectorAll('.gallery-item');
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        const filterValue = btn.getAttribute('data-filter');
+
+        galleryItems.forEach(item => {
+          const itemCategory = item.getAttribute('data-category');
+
+          if (filterValue === 'all' || itemCategory === filterValue) {
+            item.style.display = 'block';
+            setTimeout(() => {
+              item.style.opacity = '1';
+              item.style.transform = 'scale(1)';
+            }, 50);
+          } else {
+            item.style.opacity = '0';
+            item.style.transform = 'scale(0.8)';
+            setTimeout(() => {
+              item.style.display = 'none';
+            }, 300);
+          }
+        });
+      });
+    });
+
+    /* 9. Lightbox Gallery Viewer with Captions */
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const lightboxCaption = document.getElementById('lightbox-caption');
+
+    function openLightbox(galleryItem) {
+      const img = galleryItem.querySelector('.gallery-img');
+      const captionText = galleryItem.querySelector('.gallery-overlay h4').textContent;
+      
+      if (img) {
+        lightboxImg.src = img.src;
+        lightboxImg.alt = img.alt;
+        lightboxCaption.textContent = captionText;
+        lightbox.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
+    }
+
+    function closeLightbox() {
+      lightbox.classList.remove('active');
+      document.body.style.overflow = 'auto';
+      setTimeout(() => {
+        lightboxImg.src = '';
+        lightboxImg.alt = '';
+        lightboxCaption.textContent = '';
+      }, 300);
+    }
+
+    function closeLightboxOnBackdrop(e) {
+      if (e.target.id === 'lightbox' || e.target.classList.contains('lightbox-content')) {
+        closeLightbox();
+      }
+    }
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+        closeLightbox();
+      }
+    });
+  </script>
+</body>
+</html>
